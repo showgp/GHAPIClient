@@ -10,11 +10,12 @@ import Foundation
 import Alamofire
 
 public protocol IAPIClient {
+    /// 组织请求客户端(测试)
     var orgsClient: IOrgsAPIClient { get }
 }
 
 class ServerCommunicator: IAPIClient {
-    /// 用于数据情况的客户端
+    /// 用于数据请求的客户端
     private static let _client: Session = {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = ServerConfig.timeoutIntervalForRequest

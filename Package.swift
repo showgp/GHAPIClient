@@ -9,20 +9,29 @@ let package = Package(
     products: [
         .library(
             name: "GHAPIClient",
-            targets: ["GHAPIClient"]),
+            targets: ["GHAPIClient"]
+        ),
     ],
-    dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.0.0-rc.3")
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "GHAPIClient",
             dependencies: [
                 "Alamofire",
+                "PromiseKit",
             ]
         ),
         .testTarget(
             name: "GHAPIClientTests",
-            dependencies: ["GHAPIClient"]),
+            dependencies: ["GHAPIClient"]
+        ),
     ]
+)
+
+package.dependencies.append(
+    .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.0.0-rc.3")
+)
+
+package.dependencies.append(
+    .package(url: "https://github.com/mxcl/PromiseKit", from: "6.8.0")
 )
