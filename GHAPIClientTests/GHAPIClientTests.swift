@@ -39,4 +39,10 @@ class GHAPIClientTests: XCTestCase {
         XCTAssertEqual(subject.session.sessionConfiguration.timeoutIntervalForRequest, 111)
         XCTAssertEqual(subject.session.sessionConfiguration.timeoutIntervalForResource, 222)
     }
+    
+    func testGetFollowerClient() {
+        let subject = GHAPIClient()
+        let followerClient = subject.follower
+        XCTAssertNotNil(followerClient)
+    }
 }

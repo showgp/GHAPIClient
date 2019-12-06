@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import GHAPIClient
+import Alamofire
 
 /**
  主要测试内容:
@@ -20,7 +21,25 @@ import XCTest
 
 class FollowTests: XCTestCase {
     
-    func testMyFollowersCallsExpectedURL() {
-        
+    private var sut: Follow!
+    
+    override func setUp() {
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+    
+    func testInit() {
+        let follow = Follow()
+        XCTAssertNotNil(follow.session)
+    }
+    
+    func testInitWithSession() {
+        let session = Session(configuration: URLSessionConfiguration.default)
+        let sut = Follow(session: session)
+        XCTAssertTrue(session === sut.session)
     }
 }

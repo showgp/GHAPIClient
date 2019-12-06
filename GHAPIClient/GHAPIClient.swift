@@ -9,11 +9,17 @@
 import Foundation
 import Alamofire
 
-public class GHAPIClient {
-    public internal(set) var configuration: Configuration
+public protocol IGHAPIClient {
+    var follower: IFollower! { get }
+}
+
+class GHAPIClient: IGHAPIClient {
+    var configuration: Configuration
     var session: Session!
     
-    public init(configuration: Configuration = TokenConfiguration(),
+    var follower: IFollower!
+    
+    init(configuration: Configuration = TokenConfiguration(),
                 _ sessionConfig: URLSessionConfiguration? = nil) {
         self.configuration = configuration
         if let sessionConfig = sessionConfig {
@@ -21,9 +27,10 @@ public class GHAPIClient {
         } else {
             session = Session.default
         }
+        follower = Follow(session: session)
     }
     
-    public func updateConfiguration(_ config: Configuration) {
+    func updateConfiguration(_ config: Configuration) {
         configuration = config
     }
 }
