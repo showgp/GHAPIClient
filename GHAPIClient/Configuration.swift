@@ -11,7 +11,6 @@ import Foundation
 public let githubBaseURL = "https://api.github.com"
 public let githubWebURL = "https://github.com"
 
-/// API 客户端配置
 public protocol Configuration {
     /// API 节点地址
     var apiEndpoint: String { get }

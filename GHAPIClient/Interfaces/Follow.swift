@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import PromiseKit
+
+public protocol IFollower {
+    /// 获取关注了已授权用户的所有用户列表
+    func myFollowers() -> Promise<[User]>
+    
+    /// 获取关注了该用户的所有用户列表
+    func followers(name: String) -> Promise<[User]>
+    
+    /// 获取已授权用户关注的所有用户列表
+    func myFollowing() -> Promise<[User]>
+    
+    /// 获取某用户关注的所有用户列表
+    func following() -> Promise<[User]>
+}

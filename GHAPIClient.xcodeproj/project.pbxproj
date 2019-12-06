@@ -20,6 +20,7 @@
 		71A3F53C239A2FAC009783C2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71A3F53E239A2FBE009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
 		71A3F53F239A2FBE009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
+		71A3F543239A3114009783C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F542239A3114009783C2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		71A3F535239A2E41009783C2 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = SOURCE_ROOT; };
 		71A3F537239A2FAC009783C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		71A3F538239A2FAC009783C2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		71A3F542239A3114009783C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				71A3F527239A1EBC009783C2 /* Configuration.swift */,
 				71A3F52B239A26EF009783C2 /* GHAPIClient.swift */,
 				71A3F531239A2D0C009783C2 /* Interfaces */,
+				71A3F541239A3108009783C2 /* Models */,
 				71A3F52F239A2A06009783C2 /* Supporting Files */,
 			);
 			path = GHAPIClient;
@@ -161,6 +164,14 @@
 				71A3F538239A2FAC009783C2 /* PromiseKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71A3F541239A3108009783C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F542239A3114009783C2 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71A3F543239A3114009783C2 /* User.swift in Sources */,
 				71A3F533239A2DDE009783C2 /* Follow.swift in Sources */,
 				71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */,
 				71A3F528239A1EBC009783C2 /* Configuration.swift in Sources */,
