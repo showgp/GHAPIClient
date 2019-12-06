@@ -21,6 +21,7 @@
 		71A3F53E239A2FBE009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
 		71A3F53F239A2FBE009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
 		71A3F543239A3114009783C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F542239A3114009783C2 /* User.swift */; };
+		71A3F545239A32B9009783C2 /* FollowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F544239A32B9009783C2 /* FollowTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		71A3F537239A2FAC009783C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		71A3F538239A2FAC009783C2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		71A3F542239A3114009783C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		71A3F544239A32B9009783C2 /* FollowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */,
 				71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */,
+				71A3F544239A32B9009783C2 /* FollowTests.swift */,
 				71A3F530239A2A1A009783C2 /* Supporting Files */,
 			);
 			path = GHAPIClientTests;
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71A3F52E239A2720009783C2 /* GHAPIClientTests.swift in Sources */,
+				71A3F545239A32B9009783C2 /* FollowTests.swift in Sources */,
 				71A3F52A239A1FBB009783C2 /* ConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

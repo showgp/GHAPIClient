@@ -7,11 +7,23 @@
 //
 
 import Foundation
+import Alamofire
 
-public struct GHAPIClient {
-    public let configuration: TokenConfiguration
+public class GHAPIClient {
+    public internal(set) var configuration: Configuration
+    var session: Session!
     
-    public init(configuration: TokenConfiguration = TokenConfiguration()) {
+    public init(configuration: Configuration = TokenConfiguration(),
+                _ sessionConfig: URLSessionConfiguration? = nil) {
         self.configuration = configuration
+        if let sessionConfig = sessionConfig {
+            session = Session(configuration: sessionConfig)
+        } else {
+            session = Session.default
+        }
+    }
+    
+    public func updateConfiguration(_ config: Configuration) {
+        configuration = config
     }
 }
