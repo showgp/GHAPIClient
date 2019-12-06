@@ -25,7 +25,7 @@ public struct TokenConfiguration: Configuration {
     
     public let apiEndpoint: String
     
-    init(_ accessToken: String, _ apiEndpoint: String = githubBaseURL) {
+    public init(_ accessToken: String? = nil, _ apiEndpoint: String = githubBaseURL) {
         self.accessToken = accessToken
         self.apiEndpoint = apiEndpoint
     }
@@ -41,7 +41,7 @@ public struct OAuthConfiguration: Configuration {
     
     public let scopes: [String]
     
-    init(_ accessToken: String, _ apiEndpoint: String = githubBaseURL, secret: String, scopes: [String]) {
+    public init(_ accessToken: String, _ apiEndpoint: String = githubBaseURL, secret: String, scopes: [String]) {
         self.accessToken = accessToken
         self.apiEndpoint = apiEndpoint
         self.secret = secret
