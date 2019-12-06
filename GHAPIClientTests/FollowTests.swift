@@ -38,8 +38,65 @@ class FollowTests: XCTestCase {
     }
     
     func testInitWithSession() {
-        let session = Session(configuration: URLSessionConfiguration.default)
+        let session = MockSession(configuration: URLSessionConfiguration.default)
         let sut = Follow(session: session)
         XCTAssertTrue(session === sut.session)
+    }
+    
+    func testGetMyFollowers() {
+        let session = MockSession(configuration: URLSessionConfiguration.default)
+        let sut = Follow(session: session, configuration: TokenConfiguration("12345"))
+        sut.myFollowers()
+        XCTAssertEqual(session.method, .get)
+        XCTAssertEqual("\(githubBaseURL)/user/followers?access_token=12345", session.url?.absoluteString)
+        XCTAssertEqual(session.parameters as! [String: String], ["access_token": "12345"])
+    }
+}
+
+class MockSession: Session {
+    var url: URL?
+    var method: HTTPMethod?
+    var parameters: Any?
+    
+    override func request(_ convertible: URLRequestConvertible,
+                          interceptor: RequestInterceptor? = nil) -> DataRequest {
+        url = try! convertible.asURLRequest().url
+        return super.request(convertible, interceptor: interceptor)
+    }
+    
+    override func request(_ convertible: URLConvertible,
+                          method: HTTPMethod = .get,
+                          parameters: Parameters? = nil,
+                          encoding: ParameterEncoding = URLEncoding.default,
+                          headers: HTTPHeaders? = nil,
+                          interceptor: RequestInterceptor? = nil) -> DataRequest {
+        
+        
+        url = try! convertible.asURL()
+        self.method = method
+        self.parameters = parameters
+        return super.request(convertible,
+                             method: method,
+                             parameters: parameters,
+                             encoding: encoding,
+                             headers: headers,
+                             interceptor: interceptor)
+    }
+    
+    override func request<Parameters>(_ convertible: URLConvertible,
+                                      method: HTTPMethod = .get,
+                                      parameters: Parameters? = nil,
+                                      encoder: ParameterEncoder = URLEncodedFormParameterEncoder.default,
+                                      headers: HTTPHeaders? = nil,
+                                      interceptor: RequestInterceptor? = nil) -> DataRequest where Parameters : Encodable {
+        url = try! convertible.asURL()
+        self.method = method
+        self.parameters = parameters
+        return super.request(convertible,
+                             method: method,
+                             parameters: parameters,
+                             encoder: encoder,
+                             headers: headers,
+                             interceptor: interceptor)
     }
 }

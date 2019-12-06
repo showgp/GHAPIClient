@@ -27,7 +27,7 @@ class GHAPIClient: IGHAPIClient {
         } else {
             session = Session.default
         }
-        follower = Follow(session: session)
+        follower = Follow(session: session, configuration: configuration)
     }
     
     func updateConfiguration(_ config: Configuration) {

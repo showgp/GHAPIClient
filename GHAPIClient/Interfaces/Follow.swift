@@ -30,17 +30,22 @@ public protocol IFollower {
 
 class Follow: IFollower {
     var session: Session!
+    var configuration: Configuration?
     
-    init(session: Session = Session.default) {
+    init(session: Session = Session.default, configuration: Configuration? = nil) {
         self.session = session
+        self.configuration = configuration
     }
     
     @discardableResult
     func myFollowers() -> Promise<[User]> {
         return Promise(resolver: { seal in
-            session.request("https://api.github.com/user/followers", method: .get, parameters: ["access_token": "12345"]) .responseJSON(completionHandler: { resp in
-                seal.fulfill([])
-            })
+            session.request("https://api.github.com/user/followers",
+                            method: .get,
+                            parameters: ["access_token": configuration?.accessToken])
+                .responseJSON(completionHandler: { resp in
+                    seal.fulfill([])
+                })
         })
     }
     
