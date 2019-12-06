@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71A3F517239A1E35009783C2 /* GHAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F50D239A1E35009783C2 /* GHAPIClient.framework */; };
+		71A3F51E239A1E35009783C2 /* GHAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A3F510239A1E35009783C2 /* GHAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A3F528239A1EBC009783C2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F527239A1EBC009783C2 /* Configuration.swift */; };
+		71A3F52A239A1FBB009783C2 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */; };
+		71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F52B239A26EF009783C2 /* GHAPIClient.swift */; };
+		71A3F52E239A2720009783C2 /* GHAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */; };
+		71A3F533239A2DDE009783C2 /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F532239A2DDE009783C2 /* Follow.swift */; };
+		71A3F539239A2FAC009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
+		71A3F53A239A2FAC009783C2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71A3F53B239A2FAC009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
+		71A3F53C239A2FAC009783C2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71A3F53E239A2FBE009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
+		71A3F53F239A2FBE009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71A3F518239A1E35009783C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71A3F504239A1E35009783C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71A3F50C239A1E35009783C2;
+			remoteInfo = GHAPIClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		71A3F53D239A2FAC009783C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				71A3F53A239A2FAC009783C2 /* Alamofire.framework in Embed Frameworks */,
+				71A3F53C239A2FAC009783C2 /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		71A3F50D239A1E35009783C2 /* GHAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GHAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71A3F510239A1E35009783C2 /* GHAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAPIClient.h; sourceTree = "<group>"; };
+		71A3F511239A1E35009783C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71A3F516239A1E35009783C2 /* GHAPIClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHAPIClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71A3F51D239A1E35009783C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71A3F527239A1EBC009783C2 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
+		71A3F52B239A26EF009783C2 /* GHAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClient.swift; sourceTree = "<group>"; };
+		71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClientTests.swift; sourceTree = "<group>"; };
+		71A3F532239A2DDE009783C2 /* Follow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
+		71A3F534239A2E41009783C2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		71A3F535239A2E41009783C2 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = SOURCE_ROOT; };
+		71A3F537239A2FAC009783C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		71A3F538239A2FAC009783C2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71A3F50A239A1E35009783C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A3F539239A2FAC009783C2 /* Alamofire.framework in Frameworks */,
+				71A3F53B239A2FAC009783C2 /* PromiseKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71A3F513239A1E35009783C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A3F53E239A2FBE009783C2 /* Alamofire.framework in Frameworks */,
+				71A3F53F239A2FBE009783C2 /* PromiseKit.framework in Frameworks */,
+				71A3F517239A1E35009783C2 /* GHAPIClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71A3F503239A1E35009783C2 = {
+			isa = PBXGroup;
+			children = (
+				71A3F50F239A1E35009783C2 /* GHAPIClient */,
+				71A3F51A239A1E35009783C2 /* GHAPIClientTests */,
+				71A3F50E239A1E35009783C2 /* Products */,
+				71A3F536239A2FAC009783C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		71A3F50E239A1E35009783C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F50D239A1E35009783C2 /* GHAPIClient.framework */,
+				71A3F516239A1E35009783C2 /* GHAPIClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71A3F50F239A1E35009783C2 /* GHAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F527239A1EBC009783C2 /* Configuration.swift */,
+				71A3F52B239A26EF009783C2 /* GHAPIClient.swift */,
+				71A3F531239A2D0C009783C2 /* Interfaces */,
+				71A3F52F239A2A06009783C2 /* Supporting Files */,
+			);
+			path = GHAPIClient;
+			sourceTree = "<group>";
+		};
+		71A3F51A239A1E35009783C2 /* GHAPIClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */,
+				71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */,
+				71A3F530239A2A1A009783C2 /* Supporting Files */,
+			);
+			path = GHAPIClientTests;
+			sourceTree = "<group>";
+		};
+		71A3F52F239A2A06009783C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F534239A2E41009783C2 /* Cartfile */,
+				71A3F535239A2E41009783C2 /* carthage.sh */,
+				71A3F510239A1E35009783C2 /* GHAPIClient.h */,
+				71A3F511239A1E35009783C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71A3F530239A2A1A009783C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F51D239A1E35009783C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71A3F531239A2D0C009783C2 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F532239A2DDE009783C2 /* Follow.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		71A3F536239A2FAC009783C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71A3F537239A2FAC009783C2 /* Alamofire.framework */,
+				71A3F538239A2FAC009783C2 /* PromiseKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		71A3F508239A1E35009783C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A3F51E239A1E35009783C2 /* GHAPIClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		71A3F50C239A1E35009783C2 /* GHAPIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71A3F521239A1E35009783C2 /* Build configuration list for PBXNativeTarget "GHAPIClient" */;
+			buildPhases = (
+				71A3F508239A1E35009783C2 /* Headers */,
+				71A3F509239A1E35009783C2 /* Sources */,
+				71A3F50A239A1E35009783C2 /* Frameworks */,
+				71A3F50B239A1E35009783C2 /* Resources */,
+				71A3F53D239A2FAC009783C2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHAPIClient;
+			productName = GHAPIClient;
+			productReference = 71A3F50D239A1E35009783C2 /* GHAPIClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		71A3F515239A1E35009783C2 /* GHAPIClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71A3F524239A1E35009783C2 /* Build configuration list for PBXNativeTarget "GHAPIClientTests" */;
+			buildPhases = (
+				71A3F540239A2FDF009783C2 /* carthage */,
+				71A3F512239A1E35009783C2 /* Sources */,
+				71A3F513239A1E35009783C2 /* Frameworks */,
+				71A3F514239A1E35009783C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71A3F519239A1E35009783C2 /* PBXTargetDependency */,
+			);
+			name = GHAPIClientTests;
+			productName = GHAPIClientTests;
+			productReference = 71A3F516239A1E35009783C2 /* GHAPIClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71A3F504239A1E35009783C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = rayy.top;
+				TargetAttributes = {
+					71A3F50C239A1E35009783C2 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+					71A3F515239A1E35009783C2 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 71A3F507239A1E35009783C2 /* Build configuration list for PBXProject "GHAPIClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71A3F503239A1E35009783C2;
+			productRefGroup = 71A3F50E239A1E35009783C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71A3F50C239A1E35009783C2 /* GHAPIClient */,
+				71A3F515239A1E35009783C2 /* GHAPIClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71A3F50B239A1E35009783C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71A3F514239A1E35009783C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71A3F540239A2FDF009783C2 /* carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+			);
+			name = carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71A3F509239A1E35009783C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A3F533239A2DDE009783C2 /* Follow.swift in Sources */,
+				71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */,
+				71A3F528239A1EBC009783C2 /* Configuration.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71A3F512239A1E35009783C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A3F52E239A2720009783C2 /* GHAPIClientTests.swift in Sources */,
+				71A3F52A239A1FBB009783C2 /* ConfigurationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71A3F519239A1E35009783C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71A3F50C239A1E35009783C2 /* GHAPIClient */;
+			targetProxy = 71A3F518239A1E35009783C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		71A3F51F239A1E35009783C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		71A3F520239A1E35009783C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		71A3F522239A1E35009783C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6G5Z94492Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GHAPIClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.rayy.GHAPIClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		71A3F523239A1E35009783C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6G5Z94492Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GHAPIClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.rayy.GHAPIClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		71A3F525239A1E35009783C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6G5Z94492Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GHAPIClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.rayy.GHAPIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71A3F526239A1E35009783C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6G5Z94492Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = GHAPIClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.rayy.GHAPIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71A3F507239A1E35009783C2 /* Build configuration list for PBXProject "GHAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71A3F51F239A1E35009783C2 /* Debug */,
+				71A3F520239A1E35009783C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71A3F521239A1E35009783C2 /* Build configuration list for PBXNativeTarget "GHAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71A3F522239A1E35009783C2 /* Debug */,
+				71A3F523239A1E35009783C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71A3F524239A1E35009783C2 /* Build configuration list for PBXNativeTarget "GHAPIClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71A3F525239A1E35009783C2 /* Debug */,
+				71A3F526239A1E35009783C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71A3F504239A1E35009783C2 /* Project object */;
+}
