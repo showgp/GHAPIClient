@@ -33,13 +33,13 @@ class FollowTests: XCTestCase {
     }
     
     func testInit() {
-        let follow = Follow()
+        let follow = Follow(configuration: TokenConfiguration())
         XCTAssertNotNil(follow.session)
     }
     
     func testInitWithSession() {
         let session = MockSession(configuration: URLSessionConfiguration.default)
-        let sut = Follow(session: session)
+        let sut = Follow(session: session, configuration: TokenConfiguration())
         XCTAssertTrue(session === sut.session)
     }
     
@@ -48,7 +48,7 @@ class FollowTests: XCTestCase {
         let sut = Follow(session: session, configuration: TokenConfiguration("12345"))
         sut.myFollowers()
         XCTAssertEqual(session.method, .get)
-        XCTAssertEqual("\(githubBaseURL)/user/followers?access_token=12345", session.url?.absoluteString)
+        XCTAssertEqual("\(gitHubAPIURL)/user/followers?access_token=12345", session.url?.absoluteString)
         XCTAssertEqual(session.parameters as! [String: String], ["access_token": "12345"])
     }
 }

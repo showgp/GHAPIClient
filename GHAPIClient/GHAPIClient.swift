@@ -9,28 +9,23 @@
 import Foundation
 import Alamofire
 
-public protocol IGHAPIClient {
-    var follower: IFollower! { get }
-}
+/// GitHub root endpoint.
+let gitHubAPIURL = "https://api.github.com"
+
+/// GitHub web page URL.
+let gitHubURL = "https://github.com"
 
 class GHAPIClient: IGHAPIClient {
-    var configuration: Configuration
-    var session: Session!
+    var session: Session
     
-    var follower: IFollower!
-    
-    init(configuration: Configuration = TokenConfiguration(),
-                _ sessionConfig: URLSessionConfiguration? = nil) {
-        self.configuration = configuration
+    var authorization: IAuthorizationsClient
+
+    init(_ sessionConfig: URLSessionConfiguration? = nil) {
         if let sessionConfig = sessionConfig {
             session = Session(configuration: sessionConfig)
         } else {
             session = Session.default
         }
-        follower = Follow(session: session, configuration: configuration)
-    }
-    
-    func updateConfiguration(_ config: Configuration) {
-        configuration = config
+        authorization = AuthorizationsClient(session: session)
     }
 }
