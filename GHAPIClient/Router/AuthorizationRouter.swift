@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-enum AuthorizationEndPoint: APIEndPoint {
+enum AuthorizationRouter: APIRouter {        
     case getAll
     
     var method: HTTPMethod {
@@ -27,14 +27,16 @@ enum AuthorizationEndPoint: APIEndPoint {
         return nil
     }
     
-    var encoder: ParameterEncoder {
-        return JSONParameterEncoder()
+    var encoding: ParameterEncoding {
+        switch self {
+        case .getAll: return URLEncoding.default
+        }
     }
     
     var path: String {
         switch self {
         case .getAll:
-            return ""
+            return "/authorizations"
         }
     }
 }

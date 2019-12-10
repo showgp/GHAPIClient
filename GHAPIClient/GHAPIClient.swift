@@ -15,6 +15,14 @@ let gitHubAPIURL = "https://api.github.com"
 /// GitHub web page URL.
 let gitHubURL = "https://github.com"
 
+/// 向外提供接口请求入口, 根据功能进行分离, 同时持有请求时候的配置对象 `Configuration`.
+public protocol IGHAPIClient {
+    /// 可以使用这个 Session 来执行额外需要的网络请求.
+    var session: Session { get }
+    
+    var authorization: IAuthorizationsClient { get }
+}
+
 class GHAPIClient: IGHAPIClient {
     var session: Session
     

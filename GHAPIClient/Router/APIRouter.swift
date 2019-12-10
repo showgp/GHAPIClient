@@ -9,27 +9,27 @@
 import Foundation
 import Alamofire
 
-protocol APIEndPoint: URLRequestConvertible {
-    func request(with session: Session, interceptor: RequestInterceptor?) -> DataRequest
-    
+protocol APIRouter: URLRequestConvertible {
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var parameters: Parameters? { get }
-    var encoder: ParameterEncoder { get }
-    
+    var encoding: ParameterEncoding { get }
+    /// root endpoint
     var baseURL: URL { get }
-    
+    /// api path
     var path: String { get }
+    
+    func request(with session: Session, interceptor: RequestInterceptor?) -> DataRequest
 }
 
-extension APIEndPoint {
+extension APIRouter {
     var baseURL: URL { try! gitHubAPIURL.asURL() }
 
     func asURLRequest() throws -> URLRequest {
         let url = baseURL.appendingPathComponent(path)
-        let request = try URLRequest(url: url, method: method, headers: headers)
+        var request = try URLRequest(url: url, method: method, headers: headers)
+        request = try encoding.encode(request, with: parameters)
         return request
-//        return try parameters.map { try encoder.encode($0, into: request) } ?? request
     }
     
     func request(with session: Session, interceptor: RequestInterceptor? = nil) -> DataRequest {

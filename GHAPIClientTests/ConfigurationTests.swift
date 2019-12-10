@@ -15,32 +15,27 @@ class ConfigurationTests: XCTestCase {
     func testTokenConfiguration() {
         let subject = TokenConfiguration("12345")
         XCTAssertEqual(subject.accessToken, "12345")
-        XCTAssertEqual(subject.apiEndpoint, gitHubAPIURL)
     }
     
     func testEmptyConfiguration() {
         let subject = TokenConfiguration()
         XCTAssertNil(subject.accessToken)
-        XCTAssertEqual(subject.apiEndpoint, gitHubAPIURL)
     }
     
     func testEnterpriseTokenConfiguration() {
-        let subject = TokenConfiguration("12345", enterpriseURL)
+        let subject = TokenConfiguration("12345")
         XCTAssertEqual(subject.accessToken, "12345")
-        XCTAssertEqual(subject.apiEndpoint, enterpriseURL)
     }
     
     func testOAuthConfiguration() {
         let subject = OAuthConfiguration("12345", secret: "6789", scopes: ["repo", "read:org"])
         XCTAssertEqual(subject.accessToken, "12345")
         XCTAssertEqual(subject.secret, "6789")
-        XCTAssertEqual(subject.apiEndpoint, gitHubAPIURL)
     }
     
     func testOAuthTokenConfiguration() {
-        let subject = OAuthConfiguration("12345", enterpriseURL,secret: "6789", scopes: ["repo", "read:org"])
+        let subject = OAuthConfiguration("12345",secret: "6789", scopes: ["repo", "read:org"])
         XCTAssertEqual(subject.accessToken, "12345")
         XCTAssertEqual(subject.secret, "6789")
-        XCTAssertEqual(subject.apiEndpoint, enterpriseURL)
     }
 }

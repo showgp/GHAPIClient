@@ -18,6 +18,6 @@ class AuthorizationsClient: IAuthorizationsClient {
     }
     
     func getAll() -> Promise<[Authorization]> {
-        _session.request(ApiURLs.authorizations()!).decodablePromise()
+        AuthorizationRouter.getAll.request(with: _session).decodablePromise()
     }
 }
