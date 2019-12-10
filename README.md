@@ -19,12 +19,4 @@ let client = makeClient()
 let users = client.follow.followers(name: "showgp") // Promise<[User]>
 ```
 
-## 关注的问题
-
-1. 网络请求的配置和参数变化不要影响到网络请求代码, 想要的是传入请求的配置, 请求代码直接请求并拿回响应. 故如何把请求配置和请求代码分离?
-
-1. 解决 ApiURL 的生成问题.
-
-## 附: Github V3 API 相关信息
-
-Github V3 API 使用的授权方式
+更多内容详见 `docs` 目录中的文档.

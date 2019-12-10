@@ -30,7 +30,9 @@ class GHAPIClient: IGHAPIClient {
 
     init(_ sessionConfig: URLSessionConfiguration? = nil) {
         if let sessionConfig = sessionConfig {
-            session = Session(configuration: sessionConfig)
+            let config = sessionConfig
+            config.headers.add(.accept("application/vnd.github.v3+json"))
+            session = Session(configuration: config)
         } else {
             session = Session.default
         }

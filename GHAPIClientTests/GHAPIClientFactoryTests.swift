@@ -17,5 +17,7 @@ class GHAPIClientFactoryTests: XCTestCase {
         let client = makeClient(sessionConfig: config)
         XCTAssertEqual(5, client.session.sessionConfiguration.timeoutIntervalForResource)
         XCTAssertEqual(4, client.session.sessionConfiguration.timeoutIntervalForRequest)
+        XCTAssertEqual("application/vnd.github.v3+json",
+                       client.session.sessionConfiguration.headers["Accept"])
     }
 }
