@@ -18,16 +18,6 @@ class AuthorizationsClient: IAuthorizationsClient {
     }
     
     func getAll() -> Promise<[Authorization]> {
-        return Promise { seal in
-            self._session.request(ApiURLs.authorizations()!).responseData { resp in
-                switch resp.result {
-                case .success(let data):
-                    let list = try? JSONDecoder().decode([Authorization].self, from: data)
-                    seal.fulfill(list ?? [])
-                case .failure(let error):
-                    seal.reject(error)
-                }
-            }
-        }
+        _session.request(ApiURLs.authorizations()!).decodablePromise()
     }
 }

@@ -31,6 +31,9 @@
 		71A3F53F239A2FBE009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
 		71A3F543239A3114009783C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F542239A3114009783C2 /* User.swift */; };
 		71A3F545239A32B9009783C2 /* FollowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F544239A32B9009783C2 /* FollowTests.swift */; };
+		71D25CCA239F5A6B00028A4A /* AFExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D25CC9239F5A6B00028A4A /* AFExtensions.swift */; };
+		71D25CCD239F5FF000028A4A /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D25CCC239F5FF000028A4A /* APIEndPoint.swift */; };
+		71D25CD0239F601E00028A4A /* AuthorizationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D25CCF239F601E00028A4A /* AuthorizationEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		71A3F538239A2FAC009783C2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		71A3F542239A3114009783C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71A3F544239A32B9009783C2 /* FollowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTests.swift; sourceTree = "<group>"; };
+		71D25CC9239F5A6B00028A4A /* AFExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFExtensions.swift; sourceTree = "<group>"; };
+		71D25CCC239F5FF000028A4A /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		71D25CCF239F601E00028A4A /* AuthorizationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				719AAF00239D07FA00A4CE51 /* ApiURLs.swift */,
+				71D25CC9239F5A6B00028A4A /* AFExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 			children = (
 				719AAEF7239D000200A4CE51 /* IGHAPIClient.swift */,
 				71A3F52B239A26EF009783C2 /* GHAPIClient.swift */,
+				71D25CCE239F600A00028A4A /* EndPoints */,
 				719AAEFF239D07ED00A4CE51 /* Helpers */,
 				71A3F531239A2D0C009783C2 /* Clients */,
 				71A3F541239A3108009783C2 /* Models */,
@@ -220,6 +228,15 @@
 				719AAF04239D0CDD00A4CE51 /* Response */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		71D25CCE239F600A00028A4A /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				71D25CCC239F5FF000028A4A /* APIEndPoint.swift */,
+				71D25CCF239F601E00028A4A /* AuthorizationEndPoint.swift */,
+			);
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,14 +376,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D25CD0239F601E00028A4A /* AuthorizationEndPoint.swift in Sources */,
 				719AAEFE239D037000A4CE51 /* Application.swift in Sources */,
 				719AAEFA239D010500A4CE51 /* AuthorizationsClient.swift in Sources */,
 				719AAEEF239CF15900A4CE51 /* Follow.swift in Sources */,
 				719AAEF8239D000200A4CE51 /* IGHAPIClient.swift in Sources */,
 				71A3F543239A3114009783C2 /* User.swift in Sources */,
+				71D25CCD239F5FF000028A4A /* APIEndPoint.swift in Sources */,
 				71A3F533239A2DDE009783C2 /* IFollower.swift in Sources */,
 				71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */,
 				719AAEFC239D030700A4CE51 /* Authorization.swift in Sources */,
+				71D25CCA239F5A6B00028A4A /* AFExtensions.swift in Sources */,
 				719AAF01239D07FA00A4CE51 /* ApiURLs.swift in Sources */,
 				719AAEF6239CFF4B00A4CE51 /* IAuthorizationsClient.swift in Sources */,
 				71A3F528239A1EBC009783C2 /* Configuration.swift in Sources */,

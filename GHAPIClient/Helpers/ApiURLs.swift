@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct ApiURLs {
     private static let _authorizationsEndpoint = "/authorizations"
