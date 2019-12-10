@@ -15,8 +15,6 @@
 		719AAEFE239D037000A4CE51 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEFD239D037000A4CE51 /* Application.swift */; };
 		71A3F517239A1E35009783C2 /* GHAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F50D239A1E35009783C2 /* GHAPIClient.framework */; };
 		71A3F51E239A1E35009783C2 /* GHAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A3F510239A1E35009783C2 /* GHAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71A3F528239A1EBC009783C2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F527239A1EBC009783C2 /* Configuration.swift */; };
-		71A3F52A239A1FBB009783C2 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */; };
 		71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F52B239A26EF009783C2 /* GHAPIClient.swift */; };
 		71A3F52E239A2720009783C2 /* GHAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */; };
 		71A3F539239A2FAC009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
@@ -69,8 +67,6 @@
 		71A3F511239A1E35009783C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A3F516239A1E35009783C2 /* GHAPIClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHAPIClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A3F51D239A1E35009783C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71A3F527239A1EBC009783C2 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		71A3F52B239A26EF009783C2 /* GHAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClient.swift; sourceTree = "<group>"; };
 		71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClientTests.swift; sourceTree = "<group>"; };
 		71A3F534239A2E41009783C2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
@@ -149,7 +145,6 @@
 			children = (
 				719AAEF7239D000200A4CE51 /* IGHAPIClient.swift */,
 				71A3F52B239A26EF009783C2 /* GHAPIClient.swift */,
-				71A3F527239A1EBC009783C2 /* Configuration.swift */,
 				71D25CCE239F600A00028A4A /* Router */,
 				719AAEFF239D07ED00A4CE51 /* Helpers */,
 				71A3F531239A2D0C009783C2 /* Clients */,
@@ -163,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				719AAEF3239CF59C00A4CE51 /* GHAPIClientFactoryTests.swift */,
-				71A3F529239A1FBB009783C2 /* ConfigurationTests.swift */,
 				71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */,
 				71A3F530239A2A1A009783C2 /* Supporting Files */,
 			);
@@ -371,7 +365,6 @@
 				719AAEFC239D030700A4CE51 /* Authorization.swift in Sources */,
 				71D25CCA239F5A6B00028A4A /* AFExtensions.swift in Sources */,
 				719AAEF6239CFF4B00A4CE51 /* IAuthorizationsClient.swift in Sources */,
-				71A3F528239A1EBC009783C2 /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +373,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				71A3F52E239A2720009783C2 /* GHAPIClientTests.swift in Sources */,
-				71A3F52A239A1FBB009783C2 /* ConfigurationTests.swift in Sources */,
 				719AAEF4239CF59C00A4CE51 /* GHAPIClientFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

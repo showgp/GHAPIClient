@@ -9,10 +9,4 @@
 import Foundation
 import Alamofire
 
-var currentClient: IGHAPIClient?
-
-public func makeClient(sessionConfig: URLSessionConfiguration? = nil) -> IGHAPIClient {
-    let client = GHAPIClient(sessionConfig)
-    currentClient = client
-    return client
-}
+public func makeClient(sessionConfig: URLSessionConfiguration? = nil) -> IGHAPIClient { GHAPIClient(sessionConfig) }
