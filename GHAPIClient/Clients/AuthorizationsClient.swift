@@ -8,16 +8,16 @@
 
 import Foundation
 import Alamofire
-import PromiseKit
+import RxSwift
 
 class AuthorizationsClient: IAuthorizationsClient {
-    private let _session: Session
+    private let _connection: IAPIConnection
     
-    init(session: Session) {
-        _session = session
+    init(connection: IAPIConnection) {
+        _connection = connection
     }
     
-    func getAll() -> Promise<[Authorization]> {
-        AuthorizationRouter.getAll.request(with: _session).decodablePromise()
+    func getAll() -> Single<[Authorization]> {
+        _connection.request(AuthorizationRouter.getAll).gRx.decodable()
     }
 }

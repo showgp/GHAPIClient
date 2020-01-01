@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import PromiseKit
+import RxSwift
 
 public protocol IAuthorizationsClient {
-    func getAll() -> Promise<[Authorization]>
+    func getAll() -> Single<[Authorization]>
 }

@@ -11,7 +11,7 @@ import Alamofire
 
 enum AuthorizationRouter: APIRouter {        
     case getAll
-    
+
     var method: HTTPMethod {
         switch self {
         case .getAll:

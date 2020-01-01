@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		718D4F2D23BCB40900A774C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 718D4F2C23BCB40900A774C4 /* Alamofire */; };
+		718D4F3023BCB4AE00A774C4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 718D4F2F23BCB4AE00A774C4 /* RxSwift */; };
+		718D4F3323BCB62B00A774C4 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D4F3223BCB62B00A774C4 /* APIClientError.swift */; };
+		718D4F3523BCC4CC00A774C4 /* APIConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D4F3423BCC4CC00A774C4 /* APIConnection.swift */; };
+		718D4F3823BCC8D200A774C4 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D4F3723BCC8D200A774C4 /* Consts.swift */; };
 		719AAEF4239CF59C00A4CE51 /* GHAPIClientFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEF3239CF59C00A4CE51 /* GHAPIClientFactoryTests.swift */; };
 		719AAEF6239CFF4B00A4CE51 /* IAuthorizationsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEF5239CFF4B00A4CE51 /* IAuthorizationsClient.swift */; };
-		719AAEF8239D000200A4CE51 /* IGHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEF7239D000200A4CE51 /* IGHAPIClient.swift */; };
 		719AAEFA239D010500A4CE51 /* AuthorizationsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEF9239D010500A4CE51 /* AuthorizationsClient.swift */; };
 		719AAEFC239D030700A4CE51 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEFB239D030700A4CE51 /* Authorization.swift */; };
 		719AAEFE239D037000A4CE51 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719AAEFD239D037000A4CE51 /* Application.swift */; };
@@ -17,10 +21,6 @@
 		71A3F51E239A1E35009783C2 /* GHAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A3F510239A1E35009783C2 /* GHAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F52B239A26EF009783C2 /* GHAPIClient.swift */; };
 		71A3F52E239A2720009783C2 /* GHAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */; };
-		71A3F539239A2FAC009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
-		71A3F53A239A2FAC009783C2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		71A3F53B239A2FAC009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
-		71A3F53C239A2FAC009783C2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71A3F53E239A2FBE009783C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F537239A2FAC009783C2 /* Alamofire.framework */; };
 		71A3F53F239A2FBE009783C2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A3F538239A2FAC009783C2 /* PromiseKit.framework */; };
 		71A3F543239A3114009783C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3F542239A3114009783C2 /* User.swift */; };
@@ -39,26 +39,13 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		71A3F53D239A2FAC009783C2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				71A3F53A239A2FAC009783C2 /* Alamofire.framework in Embed Frameworks */,
-				71A3F53C239A2FAC009783C2 /* PromiseKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		718D4F3223BCB62B00A774C4 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
+		718D4F3423BCC4CC00A774C4 /* APIConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnection.swift; sourceTree = "<group>"; };
+		718D4F3723BCC8D200A774C4 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		719AAEF2239CF2C400A4CE51 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		719AAEF3239CF59C00A4CE51 /* GHAPIClientFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClientFactoryTests.swift; sourceTree = "<group>"; };
 		719AAEF5239CFF4B00A4CE51 /* IAuthorizationsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthorizationsClient.swift; sourceTree = "<group>"; };
-		719AAEF7239D000200A4CE51 /* IGHAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGHAPIClient.swift; sourceTree = "<group>"; };
 		719AAEF9239D010500A4CE51 /* AuthorizationsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationsClient.swift; sourceTree = "<group>"; };
 		719AAEFB239D030700A4CE51 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		719AAEFD239D037000A4CE51 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -69,8 +56,6 @@
 		71A3F51D239A1E35009783C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A3F52B239A26EF009783C2 /* GHAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClient.swift; sourceTree = "<group>"; };
 		71A3F52D239A2720009783C2 /* GHAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAPIClientTests.swift; sourceTree = "<group>"; };
-		71A3F534239A2E41009783C2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		71A3F535239A2E41009783C2 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = SOURCE_ROOT; };
 		71A3F537239A2FAC009783C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		71A3F538239A2FAC009783C2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		71A3F542239A3114009783C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -84,8 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71A3F539239A2FAC009783C2 /* Alamofire.framework in Frameworks */,
-				71A3F53B239A2FAC009783C2 /* PromiseKit.framework in Frameworks */,
+				718D4F3023BCB4AE00A774C4 /* RxSwift in Frameworks */,
+				718D4F2D23BCB40900A774C4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		718D4F3123BCB61E00A774C4 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				718D4F3223BCB62B00A774C4 /* APIClientError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		719AAEFF239D07ED00A4CE51 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +136,9 @@
 		71A3F50F239A1E35009783C2 /* GHAPIClient */ = {
 			isa = PBXGroup;
 			children = (
-				719AAEF7239D000200A4CE51 /* IGHAPIClient.swift */,
 				71A3F52B239A26EF009783C2 /* GHAPIClient.swift */,
+				718D4F3423BCC4CC00A774C4 /* APIConnection.swift */,
+				718D4F3723BCC8D200A774C4 /* Consts.swift */,
 				71A3F531239A2D0C009783C2 /* Clients */,
 				71D25CCE239F600A00028A4A /* Router */,
 				719AAEFF239D07ED00A4CE51 /* Helpers */,
@@ -167,8 +161,6 @@
 		71A3F52F239A2A06009783C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				71A3F534239A2E41009783C2 /* Cartfile */,
-				71A3F535239A2E41009783C2 /* carthage.sh */,
 				71A3F510239A1E35009783C2 /* GHAPIClient.h */,
 				71A3F511239A1E35009783C2 /* Info.plist */,
 			);
@@ -204,6 +196,7 @@
 		71A3F541239A3108009783C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				718D4F3123BCB61E00A774C4 /* Error */,
 				719AAF04239D0CDD00A4CE51 /* Response */,
 			);
 			path = Models;
@@ -240,13 +233,16 @@
 				71A3F509239A1E35009783C2 /* Sources */,
 				71A3F50A239A1E35009783C2 /* Frameworks */,
 				71A3F50B239A1E35009783C2 /* Resources */,
-				71A3F53D239A2FAC009783C2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GHAPIClient;
+			packageProductDependencies = (
+				718D4F2C23BCB40900A774C4 /* Alamofire */,
+				718D4F2F23BCB4AE00A774C4 /* RxSwift */,
+			);
 			productName = GHAPIClient;
 			productReference = 71A3F50D239A1E35009783C2 /* GHAPIClient.framework */;
 			productType = "com.apple.product-type.framework";
@@ -298,6 +294,10 @@
 				Base,
 			);
 			mainGroup = 71A3F503239A1E35009783C2;
+			packageReferences = (
+				718D4F2B23BCB40900A774C4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				718D4F2E23BCB4AE00A774C4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 71A3F50E239A1E35009783C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,14 +356,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D25CD0239F601E00028A4A /* AuthorizationRouter.swift in Sources */,
+				718D4F3823BCC8D200A774C4 /* Consts.swift in Sources */,
 				719AAEFE239D037000A4CE51 /* Application.swift in Sources */,
 				719AAEFA239D010500A4CE51 /* AuthorizationsClient.swift in Sources */,
-				719AAEF8239D000200A4CE51 /* IGHAPIClient.swift in Sources */,
 				71A3F543239A3114009783C2 /* User.swift in Sources */,
 				71D25CCD239F5FF000028A4A /* APIRouter.swift in Sources */,
+				718D4F3523BCC4CC00A774C4 /* APIConnection.swift in Sources */,
 				71A3F52C239A26EF009783C2 /* GHAPIClient.swift in Sources */,
 				719AAEFC239D030700A4CE51 /* Authorization.swift in Sources */,
 				71D25CCA239F5A6B00028A4A /* AFExtensions.swift in Sources */,
+				718D4F3323BCB62B00A774C4 /* APIClientError.swift in Sources */,
 				719AAEF6239CFF4B00A4CE51 /* IAuthorizationsClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,10 +520,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GHAPIClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -550,10 +549,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GHAPIClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -648,6 +644,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		718D4F2B23BCB40900A774C4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = "5.0.0-rc.3";
+			};
+		};
+		718D4F2E23BCB4AE00A774C4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		718D4F2C23BCB40900A774C4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 718D4F2B23BCB40900A774C4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		718D4F2F23BCB4AE00A774C4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 718D4F2E23BCB4AE00A774C4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71A3F504239A1E35009783C2 /* Project object */;
 }

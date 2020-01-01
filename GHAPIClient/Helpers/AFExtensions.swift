@@ -8,41 +8,79 @@
 
 import Foundation
 import Alamofire
-import PromiseKit
+import RxSwift
 
 extension AFDataResponse {
-    func resolveWith(resolver: PromiseKit.Resolver<Success>) {
-        switch self.result {
-        case .success(let suc):
-            resolver.fulfill(suc)
-        case .failure(let error):
-            resolver.reject(error)
+    func toSingleEvent() -> SingleEvent<Success> {
+        switch result {
+        case let .success(value):
+            return .success(value)
+        case let .failure(error):
+            return .error(error)
         }
     }
 }
 
 extension DataRequest {
-    func decodablePromise<T: Decodable>() -> Promise<T> {
-        return Promise { seal in
-            responseDecodable { (resp: AFDataResponse<T>) in resp.resolveWith(resolver: seal) }
+    var gRx: Reactive<DataRequest> { return Reactive(self) }
+    
+    func toSingle<T>(subscribe: @escaping (@escaping (SingleEvent<T>) -> Void) -> Void) -> Single<T> {
+        return Single.create { event in
+            let disposable = Disposables.create()
+            subscribe(event)
+            return disposable
+        }
+    }
+}
+
+extension DataRequest {
+//    func decodable<T: Decodable>() -> Single<T> {
+//        return toSingle { [weak self] event in
+//            self?.responseDecodable { event($0.toSingleEvent()) }
+//        }
+//    }
+//
+//    func string() -> Single<String> {
+//        return toSingle { [weak self] event in
+//            self?.responseString { event($0.toSingleEvent()) }
+//        }
+//    }
+//
+//    func data() -> Single<Data> {
+//        return toSingle { [weak self] event in
+//            self?.responseData { event($0.toSingleEvent()) }
+//        }
+//    }
+//
+//    func json() -> Single<Any> {
+//        return toSingle { [weak self] event in
+//            self?.responseJSON { event($0.toSingleEvent()) }
+//        }
+//    }
+}
+
+extension Reactive where Base == DataRequest {
+    func decodable<T: Decodable>() -> Single<T> {
+        return base.toSingle { [weak base] event in
+            base?.responseDecodable { event($0.toSingleEvent()) }
         }
     }
     
-    func stringPromise() -> Promise<String> {
-        return Promise { seal in
-            responseString { (resp: AFDataResponse<String>) in resp.resolveWith(resolver: seal) }
+    func string() -> Single<String> {
+        return base.toSingle { [weak base] event in
+            base?.responseString { event($0.toSingleEvent()) }
         }
     }
     
-    func dataPromise() -> Promise<Data> {
-        return Promise { seal in
-            responseData { (resp: AFDataResponse<Data>) in resp.resolveWith(resolver: seal) }
+    func data() -> Single<Data> {
+        return base.toSingle { [weak base] event in
+            base?.responseData { event($0.toSingleEvent()) }
         }
     }
     
-    func jsonPromise() -> Promise<Any> {
-        return Promise { seal in
-            responseJSON { (resp: AFDataResponse<Any>) in resp.resolveWith(resolver: seal) }
+    func json() -> Single<Any> {
+        return base.toSingle { [weak base] event in
+            base?.responseJSON { event($0.toSingleEvent()) }
         }
     }
 }
